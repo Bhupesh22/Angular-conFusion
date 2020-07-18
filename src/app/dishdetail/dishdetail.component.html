@@ -31,7 +31,7 @@
             </mat-card-header>
             <mat-card-content>
                     <mat-list  *ngFor="let comm of dish.comments">
-                        <mat-list-item >
+                        <mat-list-item *ngIf="dish" >
                             <p matLine><span>{{comm.comment}}</span></p>
                             <p matLine><span>{{comm.rating}} stars</span></p>
                             <p matLine><span>--{{comm.author}} {{comm.date | date:"MMM d, y"}}</span>
